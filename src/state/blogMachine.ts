@@ -20,19 +20,19 @@ export const blogMachine = createMachine(
     initial: "idle",
     on: {
       RESET: {
-        target: ".idle",
-        internal: false,
+        target: "idle",
       },
     },
     states: {
       idle: {
         on: {
           FETCH: {
-            target: "loading",
+            target: "loadingAllPosts",
           },
         },
       },
-      loading: {
+      loadingAllPosts: {
+        tags: "loading",
         invoke: {
           src: "getPosts",
           id: "getPosts",
@@ -55,11 +55,12 @@ export const blogMachine = createMachine(
           posts: {
             on: {
               "POST.CLICK": {
-                target: "loading",
+                target: "loadingSinglePost",
               },
             },
           },
-          loading: {
+          loadingSinglePost: {
+            tags: "loading",
             invoke: {
               src: "getPost",
               id: "getPost",
@@ -91,7 +92,7 @@ export const blogMachine = createMachine(
           error: {
             on: {
               RETRY: {
-                target: "loading",
+                target: "loadingSinglePost",
                 actions: "assignPost",
               },
             },
@@ -101,7 +102,7 @@ export const blogMachine = createMachine(
       error: {
         on: {
           RETRY: {
-            target: "loading",
+            target: "loadingAllPosts",
           },
         },
       },

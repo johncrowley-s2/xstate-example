@@ -22,7 +22,6 @@ export function Card({ heading, subHeading, body, onClick }: CardProps) {
           textTransform="uppercase"
           fontSize="lg"
           letterSpacing="wide"
-          color="teal.600"
         >
           {heading}
         </Text>
@@ -32,6 +31,7 @@ export function Card({ heading, subHeading, body, onClick }: CardProps) {
           fontSize="md"
           lineHeight="normal"
           fontWeight="semibold"
+          color="teal.600"
         >
           {subHeading}
         </Text>

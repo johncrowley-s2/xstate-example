@@ -55,10 +55,18 @@ export const App = () => {
                 >
                   Fetch Posts
                 </Button>
+                <Text fontSize="md">
+                  This app uses XState, a Javascript/Typescript library for
+                  creating finite-state machines with straightforward
+                  declarative code. Among the myriad advantages of this approach
+                  are a highly predictable and easy-to-reason-about flow of
+                  state throughout the application, and a clear separation of
+                  concerns, with no state management logic cluttering up view
+                  components!
+                </Text>
               </>
             )}
-            {(current.matches("loading") ||
-              current.matches("success.loading")) && (
+            {current.hasTag("loading") && (
               <>
                 <Spinner />
                 <Text>Loading...</Text>

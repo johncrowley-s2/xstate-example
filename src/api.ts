@@ -109,6 +109,22 @@ const data: Post[] = [
     
     Euismod lacinia at quis risus sed vulputate odio ut. Ipsum dolor sit amet consectetur. Ultricies mi quis hendrerit dolor magna. Scelerisque varius morbi enim nunc. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Fringilla urna porttitor rhoncus dolor purus non enim. Amet justo donec enim diam vulputate ut pharetra. Massa sapien faucibus et molestie ac feugiat. Est ante in nibh mauris cursus mattis molestie a. Sit amet nisl purus in mollis nunc. Libero id faucibus nisl tincidunt eget. Pretium viverra suspendisse potenti nullam ac tortor. Orci nulla pellentesque dignissim enim sit amet. Et tortor at risus viverra adipiscing at in. Mattis ullamcorper velit sed ullamcorper morbi. Arcu non sodales neque sodales ut.`,
   },
+  {
+    id: 7,
+    title: "How I Got Promoted To Dorito Engineer",
+    author: "coco",
+    snippet:
+      "Eu scelerisque felis imperdiet proin fermentum leo vel orci porta.",
+    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar elementum integer enim neque volutpat. Id eu nisl nunc mi ipsum faucibus. Arcu vitae elementum curabitur vitae. Nunc eget lorem dolor sed viverra. Fringilla urna porttitor rhoncus dolor purus. Nunc vel risus commodo viverra. Eget aliquet nibh praesent tristique magna. Feugiat scelerisque varius morbi enim nunc faucibus. In ante metus dictum at tempor commodo. Id porta nibh venenatis cras sed felis.
+
+    Penatibus et magnis dis parturient montes. Faucibus a pellentesque sit amet porttitor. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. Aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Viverra nam libero justo laoreet. Ut sem nulla pharetra diam sit amet. Ullamcorper morbi tincidunt ornare massa eget egestas purus. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Vulputate ut pharetra sit amet. Nulla facilisi cras fermentum odio. Egestas pretium aenean pharetra magna ac placerat vestibulum. Ultrices dui sapien eget mi proin sed. Erat nam at lectus urna duis. A diam maecenas sed enim ut sem viverra. Lacinia at quis risus sed vulputate odio ut enim blandit.
+    
+    Nulla at volutpat diam ut venenatis tellus in. Elit at imperdiet dui accumsan sit amet nulla facilisi. Vitae aliquet nec ullamcorper sit amet risus nullam. Diam sollicitudin tempor id eu nisl nunc mi. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Est placerat in egestas erat imperdiet sed euismod nisi. Feugiat vivamus at augue eget arcu dictum. Tristique senectus et netus et malesuada fames ac. Volutpat sed cras ornare arcu dui vivamus. Sed nisi lacus sed viverra tellus in hac habitasse platea. Id leo in vitae turpis massa sed elementum. Magna fringilla urna porttitor rhoncus dolor purus non.
+    
+    Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Turpis egestas pretium aenean pharetra. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Tempus imperdiet nulla malesuada pellentesque. Tristique sollicitudin nibh sit amet commodo nulla. Ornare arcu odio ut sem nulla pharetra diam sit amet. Arcu risus quis varius quam quisque id diam vel quam. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus. At quis risus sed vulputate odio. Aliquam malesuada bibendum arcu vitae. Id venenatis a condimentum vitae. Et malesuada fames ac turpis egestas. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis. Nisl rhoncus mattis rhoncus urna.
+    
+    Vel turpis nunc eget lorem dolor sed. Amet luctus venenatis lectus magna fringilla urna porttitor. Egestas congue quisque egestas diam in arcu cursus euismod quis. Ac felis donec et odio pellentesque diam volutpat. Bibendum arcu vitae elementum curabitur. Lorem ipsum dolor sit amet consectetur adipiscing. Id leo in vitae turpis massa sed elementum tempus egestas. Porttitor massa id neque aliquam. Consequat semper viverra nam libero justo. Sapien faucibus et molestie ac feugiat sed. Non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Diam vel quam elementum pulvinar etiam non quam lacus. Ultricies integer quis auctor elit sed vulputate mi sit. Tellus elementum sagittis vitae et leo duis ut diam. Vestibulum lectus mauris ultrices eros.`,
+  },
 ];
 
 export function getPosts() {
