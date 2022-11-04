@@ -115,7 +115,7 @@ export function getPosts() {
   return new Promise<Post[]>((resolve, reject) => {
     setTimeout(() => {
       const rnd = Math.random();
-      if (rnd <= 0.7) {
+      if (rnd < 0.9) {
         resolve(data.sort(() => Math.random() - 0.5));
       } else {
         reject();
@@ -129,7 +129,7 @@ export function getPost(id: number) {
     setTimeout(() => {
       const rnd = Math.random();
       const post = data.find((p) => p.id === id);
-      if (post && rnd <= 0.7) {
+      if (post && rnd < 0.9) {
         resolve(post);
       } else {
         reject();

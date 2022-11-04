@@ -2,7 +2,7 @@ import { assign, createMachine } from "xstate";
 import { getPost, getPosts } from "../api";
 import { Post } from "../types";
 
-export const stateMachine = createMachine(
+export const blogMachine = createMachine(
   {
     context: { posts: [], post: undefined },
     schema: {
@@ -16,7 +16,7 @@ export const stateMachine = createMachine(
         | { type: "BACK" },
     },
     predictableActionArguments: true,
-    id: "stateMachine",
+    id: "blogMachine",
     initial: "idle",
     on: {
       RESET: {
@@ -71,7 +71,7 @@ export const stateMachine = createMachine(
               ],
               onError: [
                 {
-                  target: "#stateMachine.error",
+                  target: "#blogMachine.error",
                 },
               ],
             },

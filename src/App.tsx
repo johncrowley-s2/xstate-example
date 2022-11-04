@@ -13,10 +13,10 @@ import {
 import { useMachine } from "@xstate/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { Card } from "./components/Card";
-import { stateMachine } from "./state/stateMachine";
+import { blogMachine } from "./state/blogMachine";
 
 export const App = () => {
-  const [current, send] = useMachine(stateMachine);
+  const [current, send] = useMachine(blogMachine);
 
   return (
     <ChakraProvider theme={theme}>
@@ -36,7 +36,7 @@ export const App = () => {
         <ColorModeSwitcher justifySelf="flex-end" />
       </Flex>
       <Box textAlign="center" fontSize="xl" marginTop="2rem">
-        <Grid minH="100vh" p={3}>
+        <Grid p={3}>
           <VStack spacing={8}>
             {current.matches("idle") && (
               <>
