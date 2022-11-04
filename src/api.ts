@@ -96,7 +96,7 @@ const data: Post[] = [
   {
     id: 6,
     title:
-      "How to Stay Eezy, Breezy, Beautiful While Writing Some Siiiiick Code",
+      "How to Stay Eezy, Breezy, and Beautiful While Writing Some Siiiiick Code",
     author: "coco",
     snippet: "Amet est placerat in egestas erat imperdiet sed euismod.",
     body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices eros in cursus turpis massa tincidunt. Urna id volutpat lacus laoreet. Lectus mauris ultrices eros in cursus turpis. Malesuada proin libero nunc consequat interdum varius sit. Dolor magna eget est lorem ipsum dolor. Risus nullam eget felis eget nunc lobortis. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. In arcu cursus euismod quis viverra. Urna molestie at elementum eu. A cras semper auctor neque vitae tempus quam. Duis convallis convallis tellus id. Ultrices vitae auctor eu augue ut lectus arcu bibendum. Faucibus et molestie ac feugiat sed lectus. Ac turpis egestas maecenas pharetra convallis posuere morbi leo urna. Massa tempor nec feugiat nisl pretium. Nibh tortor id aliquet lectus proin nibh nisl condimentum. Nisi scelerisque eu ultrices vitae auctor eu augue. Quis varius quam quisque id diam vel quam elementum pulvinar.
