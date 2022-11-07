@@ -2,6 +2,57 @@ import { assign, createMachine } from "xstate";
 import { getPost, getPosts } from "../api";
 import { Post } from "../types";
 
+const successStates = {
+  initial: "posts",
+  states: {
+    posts: {
+      on: {
+        "POST.CLICK": {
+          target: "loadingSinglePost",
+        },
+      },
+    },
+    loadingSinglePost: {
+      tags: "loading",
+      invoke: {
+        src: "getPost",
+        id: "getPost",
+        onDone: [
+          {
+            target: "post",
+            actions: "assignPost",
+          },
+        ],
+        onError: [
+          {
+            target: "#blogMachine.error",
+          },
+        ],
+      },
+      on: {
+        BACK: {
+          target: "posts",
+        },
+      },
+    },
+    post: {
+      on: {
+        BACK: {
+          target: "posts",
+        },
+      },
+    },
+    error: {
+      on: {
+        RETRY: {
+          target: "loadingSinglePost",
+          actions: "assignPost",
+        },
+      },
+    },
+  },
+};
+
 export const blogMachine = createMachine(
   {
     context: { posts: [], post: undefined },
@@ -50,54 +101,7 @@ export const blogMachine = createMachine(
         },
       },
       success: {
-        initial: "posts",
-        states: {
-          posts: {
-            on: {
-              "POST.CLICK": {
-                target: "loadingSinglePost",
-              },
-            },
-          },
-          loadingSinglePost: {
-            tags: "loading",
-            invoke: {
-              src: "getPost",
-              id: "getPost",
-              onDone: [
-                {
-                  target: "post",
-                  actions: "assignPost",
-                },
-              ],
-              onError: [
-                {
-                  target: "#blogMachine.error",
-                },
-              ],
-            },
-            on: {
-              BACK: {
-                target: "posts",
-              },
-            },
-          },
-          post: {
-            on: {
-              BACK: {
-                target: "posts",
-              },
-            },
-          },
-          error: {
-            on: {
-              RETRY: {
-                target: "loadingSinglePost",
-                actions: "assignPost",
-              },
-            },
-          },
-        },
+        ...successStates,
       },
       error: {
         on: {
